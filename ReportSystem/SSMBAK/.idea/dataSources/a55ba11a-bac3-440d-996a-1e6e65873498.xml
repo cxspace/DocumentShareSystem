@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="temp@222.204.6.192">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="temp">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="data_analyze"/>
+    <schema id="4" parent="1" name="da_dou_mi_ques"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="doc_system"/>
+    <table id="11" parent="2" name="TEMPERATURE"/>
+    <table id="12" parent="2" name="TEMP_M1_BUTTOM_ONE"/>
+    <table id="13" parent="2" name="TEMP_M1_BUTTOM_THREE"/>
+    <table id="14" parent="2" name="TEMP_M1_BUTTOM_TWO"/>
+    <table id="15" parent="2" name="TEMP_M1_SIDE_FOUR"/>
+    <table id="16" parent="2" name="TEMP_M1_SIDE_ONE"/>
+    <table id="17" parent="2" name="TEMP_M1_SIDE_THREE"/>
+    <table id="18" parent="2" name="TEMP_M1_SIDE_TWO"/>
+    <table id="19" parent="2" name="TEMP_M1_TOP_ONE"/>
+    <table id="20" parent="2" name="TEMP_M1_TOP_THREE"/>
+    <table id="21" parent="2" name="TEMP_M1_TOP_TWO"/>
+    <column id="22" parent="11" name="TEMP">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="23" parent="11" name="HUM">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="12" name="TEMP_M1_BUTTOM_ONE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="25" parent="12" name="HUM_M1_BUTTOM_ONE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="26" parent="12" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="27" parent="13" name="TEMP_M1_BUTTOM_THREE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="28" parent="13" name="HUM_M1_BUTTOM_THREE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="29" parent="13" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="30" parent="14" name="TEMP_M1_BUTTOM_TWO">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="31" parent="14" name="HUM_M1_BUTTOM_TWO">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="32" parent="14" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="33" parent="15" name="TEMP_M1_SIDE_FOUR">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="34" parent="15" name="HUM_M1_SIDE_FOUR">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="35" parent="15" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="36" parent="16" name="TEMP_M1_SIDE_ONE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="37" parent="16" name="HUM_M1_SIDE_ONE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="38" parent="16" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="39" parent="17" name="TEMP_M1_SIDE_THREE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="40" parent="17" name="HUM_M1_SIDE_THREE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="41" parent="17" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="42" parent="18" name="TEMP_M1_SIDE_TWO">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="43" parent="18" name="HUM_M1_SIDE_TWO">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="44" parent="18" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="45" parent="19" name="TEMP_M1_TOP_ONE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="46" parent="19" name="HUM_M1_TOP_ONE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="47" parent="19" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="48" parent="20" name="TEMP_M1_TOP_THREE">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="49" parent="20" name="HUM_M1_TOP_THREE">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="50" parent="20" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="51" parent="21" name="TEMP_M1_TOP_TWO">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="52" parent="21" name="HUM_M1_TOP_TWO">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="53" parent="21" name="TIME">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cxspace.ssm.dao.CommentDao">
+
+    <resultMap id="commentResultMap" type="com.cxspace.ssm.model.Comment">
+
+        <id property="id" column="id"></id>
+
+        <result property="doc_id" column="doc_id"/>
+
+        <result property="content" column="content"/>
+
+        <result property="username" column="username"/>
+
+        <result property="create_time" column="create_time"/>
+
+
+    </resultMap>
+
+    <insert id="save">
+
+        INSERT INTO t_comment(doc_id,content,username,create_time)
+        VALUES (
+            #{docId},#{comment.content},#{comment.username},#{comment.create_time}
+        );
+
+    </insert>
+
+
+    <select id="findCommentsByDocId" parameterType="Integer" resultMap="commentResultMap">
+
+        SELECT * FROM t_comment WHERE doc_id = #{doc_id};
+
+    </select>
+
+    <delete id="deleteAllCommentsByDocId" parameterType="Integer">
+
+        DELETE FROM t_comment WHERE doc_id = #{doc_id};
+
+    </delete>
+
+</mapper>

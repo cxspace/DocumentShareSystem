@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>文档详细内容</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link href="bower_components/summernote/dist/summernote.css" rel="stylesheet">
+
+
+  </head>
+
+  <body style="font-family:'Roboto';background:#333;margin:0">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">返回主页</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="搜索关键字">
+          </div>
+
+          <select class="form-control">
+            <option>学生姓名</option>
+            <option>学生学号</option>
+            <option>文档标题</option>
+          </select>
+
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html">教师登录</a></li>
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div  id="doc_content"  style="width: 100%;height: 100%;background-color: white;padding-top: 10px;padding-bottom: 20px;padding-left: 5%;padding-right: 5%">
+
+        <h2 style="text-align: center">文章标题:引用</h2>
+
+        <p style="text-align: center">学号: 123456789&nbsp;&nbsp;&nbsp;&nbsp;姓名：柳杰</p>
+
+
+        <p>应用字符串指针COPY</p><pre class="brush:cpp;toolbar:false">#include&nbsp;#include&nbsp;using&nbsp;namespace&nbsp;std;
+
+int&nbsp;main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;a[]&nbsp;=&nbsp;&quot;How&nbsp;are&nbsp;you?&quot;,b[20];
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;*p1,*p2;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;for(p1&nbsp;=&nbsp;a,p2&nbsp;=&nbsp;b;*p1&nbsp;!=&nbsp;&#39;\0&#39;;p1++,p2++)
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*p2&nbsp;=&nbsp;*p1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*p2&nbsp;=&nbsp;&#39;\0&#39;;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;&quot;string&nbsp;a&nbsp;is&nbsp;:&quot;&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;&quot;string&nbsp;b&nbsp;is&nbsp;:&quot;&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
+}</pre><p><br/></p><p>输出：a,b都是字符串</p><pre class="brush:cpp;toolbar:false">How&nbsp;are&nbsp;you?</pre><p><br/></p><p>应用举例二</p><pre class="brush:cpp;toolbar:false">int&nbsp;main()
+{
+
+&nbsp;&nbsp;int&nbsp;a&nbsp;=&nbsp;5;
+&nbsp;&nbsp;int&nbsp;*pa&nbsp;=&nbsp;&amp;a;
+&nbsp;&nbsp;
+&nbsp;&nbsp;int&nbsp;b[6]&nbsp;=&nbsp;{1,2,3,4,5,6};
+&nbsp;&nbsp;int&nbsp;*pb&nbsp;=&nbsp;b;
+&nbsp;&nbsp;
+&nbsp;&nbsp;char&nbsp;c[6]&nbsp;=&nbsp;{&#39;h&#39;,&#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;,&#39;\0&#39;};
+&nbsp;&nbsp;
+&nbsp;&nbsp;char&nbsp;*pc&nbsp;=&nbsp;c;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;a&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pa&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;b&nbsp;&lt;&lt;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pb&nbsp;&lt;&lt;&nbsp;endl&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;c&nbsp;&lt;&lt;&nbsp;endl;&nbsp;//这里直接输出字符串
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pc&nbsp;&lt;&lt;&nbsp;endl;&nbsp;&nbsp;&nbsp;//这里直接输出字符串
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;static_cast&nbsp;&lt;&nbsp;void*&nbsp;&gt;&nbsp;(c)&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;static_cast&nbsp;&lt;&nbsp;void*&nbsp;&gt;&nbsp;(pc)&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;
+&nbsp;&nbsp;return&nbsp;0
+&nbsp;&nbsp;
+}</pre><p><br/></p><p>字符串指针举例</p><pre class="brush:cpp;toolbar:false">#include&nbsp;using&nbsp;namespace&nbsp;std;
+
+int&nbsp;main(){
+
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;buffer[10]&nbsp;=&nbsp;&quot;ABC&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;*pc;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;pc&nbsp;=&nbsp;&quot;hello&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pc&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;pc&nbsp;++;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pc&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;*pc&nbsp;&lt;&lt;&nbsp;endl;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;pc&nbsp;=&nbsp;buffer;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;pc;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
+
+}</pre><p>输出结果</p><pre class="brush:cpp;toolbar:false">hello
+ello
+e
+ABC</pre><p><br/></p><p><br/></p><p><br/></p><p><br/></p>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <br/>
+
+    <br/>
+
+    <div class="row">
+
+      <a type="button" id="btn-html2canvas" class="btn btn-default btn-lg btn-block">将上述内容生成PDF文档</a>
+
+      <br/>
+
+      <textarea class="form-control" id="summernote" rows="3" placeholder="教师填写评论"></textarea>
+
+
+      <br/>
+
+
+
+      <a type="button"  href="doc-detail.html" class="btn btn-default btn-lg btn-block">提交评论</a>
+
+      <br/>
+
+    </div>
+
+  </div>
+
+  <!--jquery.js必须在前面-->
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js">
+  </script>
+
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+  </script>
+
+
+  <script src="bower_components/summernote/dist/summernote.js"></script>
+
+
+  <script>
+      $(document).ready(function() {
+          $('#summernote').summernote();
+      });
+  </script>
+
+  <script src="js/jspdf.debug.js"></script>
+  <script src="js/html2canvas.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
