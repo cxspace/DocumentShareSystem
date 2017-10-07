@@ -2,7 +2,7 @@
 
 ## Online Demo
 
-http://good.ncu.edu.cn/doc_sys/
+http://good.ncu.edu.cn:8888/doc_sys/
 
 ## install
 
